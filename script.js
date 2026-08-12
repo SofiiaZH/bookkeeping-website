@@ -57,3 +57,13 @@ const header = document.querySelector('.site-header');
 window.addEventListener('scroll', () => {
   header.classList.toggle('scrolled', window.scrollY > 30);
 });
+
+const params = new URLSearchParams(window.location.search);
+
+if (params.get("sent") === "1") {
+  const successMessage = document.getElementById("form-success");
+
+  if (successMessage) {
+    successMessage.style.display = "block";
+  }
+}
