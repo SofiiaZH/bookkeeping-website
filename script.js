@@ -51,3 +51,9 @@ if ("IntersectionObserver" in window) {
 }
 
 document.getElementById("current-year").textContent = new Date().getFullYear();
+
+const header = document.querySelector('.site-header');
+
+window.addEventListener('scroll', () => {
+  header.classList.toggle('scrolled', window.scrollY > 30);
+});
