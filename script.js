@@ -66,4 +66,6 @@ if (params.get("sent") === "1") {
   if (successMessage) {
     successMessage.style.display = "block";
   }
+
+  window.history.replaceState({}, document.title, window.location.pathname);
 }
