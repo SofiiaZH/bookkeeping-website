@@ -484,10 +484,6 @@
           method="POST"
         >
 
-          git add .<p id="form-success" class="form-success" style="display: none;">
-            Thanks! Your message has been sent. I’ll get back to you shortly.
-          </p>
-
           <input type="hidden" name="_subject" value="New website enquiry" />
           <input type="hidden" name="_captcha" value="false" />
           <input type="hidden" name="_template" value="table" />
@@ -521,10 +517,19 @@
             Free initial chat. No obligation.
           </p>
         </form>
-          <p id="form-success" style="display: none;">
-          Thanks! Your message has been sent. I’ll get back to you shortly.
-          </p>
-      </div>
+          <div id="success-popup" class="success-popup">
+            <div class="success-popup-box">
+              <button type="button" class="success-popup-close" aria-label="Close">×</button>
+
+              <div class="success-popup-icon">✓</div>
+
+              <h3>Message sent!</h3>
+              <p>Thanks! Your message has been sent.<br>
+              I’ll get back to you shortly.</p>
+
+              <button type="button" class="success-popup-ok">Done</button>
+              </div>
+          </div>
     </section>
   </main>
 

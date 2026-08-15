@@ -59,13 +59,22 @@ window.addEventListener('scroll', () => {
 });
 
 const params = new URLSearchParams(window.location.search);
+const successPopup = document.getElementById("success-popup");
 
-if (params.get("sent") === "1") {
-  const successMessage = document.getElementById("form-success");
+if (params.get("sent") === "1" && successPopup) {
+  successPopup.classList.add("show");
 
-  if (successMessage) {
-    successMessage.style.display = "block";
-  }
-
-  window.history.replaceState({}, document.title, window.location.pathname);
+  window.history.replaceState(
+    {},
+    document.title,
+    window.location.pathname
+  );
 }
+
+document.querySelector(".success-popup-close")?.addEventListener("click", () => {
+  successPopup?.classList.remove("show");
+});
+
+document.querySelector(".success-popup-ok")?.addEventListener("click", () => {
+  successPopup?.classList.remove("show");
+});
